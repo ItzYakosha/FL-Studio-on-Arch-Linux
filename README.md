@@ -1,6 +1,6 @@
 # FL Studio на Arch Linux
 
-Автоматический установщик FL Studio для Arch Linux через Bottles
+Автоматический установщик FL Studio для Arch Linux
 
 ## Установка
 
