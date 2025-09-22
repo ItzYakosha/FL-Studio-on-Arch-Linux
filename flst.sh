@@ -172,16 +172,16 @@ install_bottle_components() {
 download_flstudio_installer() {
     log_info "Проверка установщика FL Studio..."
 
-    mkdir -p ~/Downloads/FLStudio
+    mkdir -p ~/Downloads
 
-    if [ -f ~/Downloads/FLStudio/FLStudio_Installer.exe ]; then
+    if [ -f ~/Downloads/FLStudio_Installer.exe ]; then
         log_info "Установщик FL Studio найден"
         return
     fi
 
     log_error "Установщик FL Studio не найден!"
     log_info "Скачайте FLStudio_Installer.exe с https://www.image-line.com/fl-studio-download/"
-    log_info "Сохраните в: ~/Downloads/FLStudio/FLStudio_Installer.exe"
+    log_info "Сохраните в: ~/Downloads/FLStudio_Installer.exe"
     log_info "Запустите скрипт снова после загрузки"
     exit 1
 }
@@ -189,16 +189,16 @@ download_flstudio_installer() {
 install_flstudio() {
     log_info "Установка FL Studio..."
 
-    if [ ! -f ~/Downloads/FLStudio/FLStudio_Installer.exe ]; then
+    if [ ! -f ~/Downloads/FLStudio_Installer.exe ]; then
         log_error "Установщик FL Studio не найден!"
         exit 1
     fi
 
     if command -v bottles-cli &>/dev/null; then
-        bottles-cli run --bottle "FLStudio" --executable ~/Downloads/FLStudio/FLStudio_Installer.exe
+        bottles-cli run --bottle "FLStudio" --executable ~/Downloads/FLStudio_Installer.exe
     else
         log_info "Запуск установщика через wine..."
-        wine ~/Downloads/FLStudio/FLStudio_Installer.exe
+        wine ~/Downloads/FLStudio_Installer.exe
     fi
 }
 
