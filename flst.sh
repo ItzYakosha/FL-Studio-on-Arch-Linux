@@ -43,14 +43,6 @@ log_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
-check_arch() {
-    if ! grep -q "Arch Linux" /etc/os-release 2>/dev/null; then
-        log_error "Этот скрипт предназначен только для Arch Linux"
-        exit 1
-    fi
-    log_info "Обнаружен Arch Linux"
-}
-
 install_dependencies() {
     log_info "Обновление системы и установка зависимостей..."
 
