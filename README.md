@@ -5,7 +5,7 @@
 ## Установка
 
 ### Способ 1
-```bash
+
 # Клонируйте репозиторий
 git clone https://github.com/ItzYakosha/FL-Studio-on-Arch-Linux.git
 cd FL-Studio-on-Arch-Linux
