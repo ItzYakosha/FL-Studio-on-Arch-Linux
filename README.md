@@ -12,6 +12,7 @@ chmod +x flst.sh
 ```
 # Или скачайте файл вручную и откройте в терминале
 ```bash
+cd ~/Downloads
 chmod +x flst.sh
 ./flst.sh
 ```
