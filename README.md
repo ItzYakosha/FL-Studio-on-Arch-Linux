@@ -5,7 +5,7 @@
 ## Установка
 
 ```bash
-git clone https://github.com/ItzYakosha/FL-Studio-on-Arch-Linux.git
+git clone https://github.com/iy-cmd/FL-Studio-on-Arch-Linux.git
 cd FL-Studio-on-Arch-Linux
 chmod +x flst.sh
 ./flst.sh
